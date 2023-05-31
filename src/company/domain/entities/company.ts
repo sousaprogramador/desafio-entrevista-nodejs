@@ -30,7 +30,7 @@ export class Company extends Entity<CompanyProperties> {
     this.city = this.props.city;
     this.state = this.props.state;
     this.zip_code = this.props.zip_code;
-    this.props.created_at = this.props.updated_at ?? new Date();
+    this.props.created_at = this.props.created_at ?? new Date();
     this.props.updated_at = this.props.updated_at ?? new Date();
   }
 
