@@ -17,7 +17,7 @@ describe('GetCompanyUseCase', () => {
     );
   });
 
-  it('should returns a category', async () => {
+  it('should returns a company', async () => {
     const items = [
       new Company({
         name: 'some name',

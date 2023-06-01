@@ -87,7 +87,7 @@ describe('Company Unit Test', () => {
     expect(typeCompany.name).toBe('new name');
   });
 
-  it('should update a category', () => {
+  it('should update a company', () => {
     const company = new Company({
       name: 'some name',
       government_code: 'some government_code',
