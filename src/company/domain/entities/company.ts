@@ -12,6 +12,8 @@ export type CompanyProperties = {
   city: string;
   state: string;
   zip_code: string;
+  vacancies_cars: number;
+  vacancies_motorcycle: number;
   created_at?: Date;
   updated_at?: Date;
 };
@@ -30,6 +32,8 @@ export class Company extends Entity<CompanyProperties> {
     this.city = this.props.city;
     this.state = this.props.state;
     this.zip_code = this.props.zip_code;
+    this.vacancies_cars = this.props.vacancies_cars;
+    this.vacancies_motorcycle = this.props.vacancies_motorcycle;
     this.props.created_at = this.props.created_at ?? new Date();
     this.props.updated_at = this.props.updated_at ?? new Date();
   }
@@ -98,6 +102,22 @@ export class Company extends Entity<CompanyProperties> {
     this.props.zip_code = value;
   }
 
+  get vacancies_cars() {
+    return this.props.vacancies_cars;
+  }
+
+  private set vacancies_cars(value: number) {
+    this.props.vacancies_cars = value;
+  }
+
+  get vacancies_motorcycle() {
+    return this.props.vacancies_motorcycle;
+  }
+
+  private set vacancies_motorcycle(value: number) {
+    this.props.vacancies_motorcycle = value;
+  }
+
   get created_at() {
     return this.props.created_at;
   }
@@ -125,6 +145,8 @@ export class Company extends Entity<CompanyProperties> {
       city: this.city,
       state: this.state,
       zip_code: this.zip_code,
+      vacancies_cars: this.vacancies_cars,
+      vacancies_motorcycle: this.vacancies_motorcycle,
       created_at: this.created_at,
       updated_at: this.updated_at,
     };

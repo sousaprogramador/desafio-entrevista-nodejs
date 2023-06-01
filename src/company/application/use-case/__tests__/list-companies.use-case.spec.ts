@@ -39,6 +39,8 @@ describe('ListTypeCompaniesUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
     result = new CompanyRepository.SearchResult({
       items: [entity],
@@ -71,6 +73,8 @@ describe('ListTypeCompaniesUseCase', () => {
         city: 'some city',
         state: '12',
         zip_code: 'some zip_code',
+        vacancies_cars: 0,
+        vacancies_motorcycle: 0,
       }),
       new Company({
         name: 'some name',
@@ -81,6 +85,8 @@ describe('ListTypeCompaniesUseCase', () => {
         city: 'some city',
         state: '12',
         zip_code: 'some zip_code',
+        vacancies_cars: 0,
+        vacancies_motorcycle: 0,
         created_at: new Date(new Date().getTime() + 100),
       }),
     ];

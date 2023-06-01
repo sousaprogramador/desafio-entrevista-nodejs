@@ -20,6 +20,8 @@ describe('CreateCompanyUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
 
     expect(spyInsert).toHaveBeenCalledTimes(1);
@@ -33,6 +35,8 @@ describe('CreateCompanyUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at: repository.items[0].created_at,
       updated_at: repository.items[0].updated_at,
     });
@@ -46,6 +50,8 @@ describe('CreateCompanyUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some 34',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
     expect(spyInsert).toHaveBeenCalledTimes(2);
     expect(output).toStrictEqual({
@@ -58,6 +64,8 @@ describe('CreateCompanyUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some 34',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at: repository.items[1].created_at,
       updated_at: repository.items[1].updated_at,
     });

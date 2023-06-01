@@ -24,6 +24,8 @@ export type Input = {
   city: string;
   state: string;
   zip_code: string;
+  vacancies_cars: number;
+  vacancies_motorcycle: number;
 };
 
 export type Output = CompanyOutput;

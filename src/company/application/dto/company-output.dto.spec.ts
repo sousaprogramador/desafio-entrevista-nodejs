@@ -14,6 +14,8 @@ describe('TypeCompanyOutputMapper Unit Tests', () => {
       city: 'some city',
       state: 'rs',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at,
       updated_at,
     });
@@ -30,6 +32,8 @@ describe('TypeCompanyOutputMapper Unit Tests', () => {
       city: 'some city',
       state: 'rs',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at,
       updated_at,
     });

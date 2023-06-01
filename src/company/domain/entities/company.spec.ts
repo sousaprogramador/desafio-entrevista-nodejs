@@ -15,6 +15,8 @@ describe('Company Unit Test', () => {
       city: '',
       state: '',
       zip_code: '',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
     let props = omit(company.props, 'created_at', 'updated_at');
 
@@ -28,6 +30,8 @@ describe('Company Unit Test', () => {
       city: '',
       state: '',
       zip_code: '',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
 
     expect(company.props.created_at).toBeInstanceOf(Date);
@@ -42,6 +46,8 @@ describe('Company Unit Test', () => {
       city: 'some city',
       state: 'some state',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at,
     });
 
@@ -56,6 +62,8 @@ describe('Company Unit Test', () => {
       city: 'some city',
       state: 'some state',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at,
     });
   });
@@ -70,6 +78,8 @@ describe('Company Unit Test', () => {
       city: 'some city',
       state: 'some state',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
     });
     expect(typeCompany.name).toBe('some name');
 

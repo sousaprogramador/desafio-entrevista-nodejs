@@ -14,6 +14,8 @@ describe('Company Integration Tests', () => {
             city: 'some city',
             state: 'so',
             zip_code: 'some zip_code',
+            vacancies_cars: 0,
+            vacancies_motorcycle: 0,
           }),
       ).containsErrorMessages({
         name: [
@@ -33,6 +35,8 @@ describe('Company Integration Tests', () => {
             city: 'some city',
             state: 'so',
             zip_code: 'some zip_code',
+            vacancies_cars: 0,
+            vacancies_motorcycle: 0,
           }),
       ).containsErrorMessages({
         name: [
@@ -52,6 +56,8 @@ describe('Company Integration Tests', () => {
             city: 'some city',
             state: 'so',
             zip_code: 'some zip_code',
+            vacancies_cars: 0,
+            vacancies_motorcycle: 0,
           }),
       ).containsErrorMessages({
         name: ['name must be shorter than or equal to 255 characters'],
@@ -70,6 +76,8 @@ describe('Company Integration Tests', () => {
         city: 'some city',
         state: 'so',
         zip_code: 'some zip_code',
+        vacancies_cars: 0,
+        vacancies_motorcycle: 0,
       });
     });
   });

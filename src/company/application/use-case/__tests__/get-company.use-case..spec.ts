@@ -28,6 +28,8 @@ describe('GetCompanyUseCase', () => {
         city: 'some city',
         state: '12',
         zip_code: 'some zip_code',
+        vacancies_cars: 0,
+        vacancies_motorcycle: 0,
       }),
     ];
     repository.items = items;
@@ -44,6 +46,8 @@ describe('GetCompanyUseCase', () => {
       city: 'some city',
       state: '12',
       zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
       created_at: repository.items[0].created_at,
       updated_at: repository.items[0].updated_at,
     });
