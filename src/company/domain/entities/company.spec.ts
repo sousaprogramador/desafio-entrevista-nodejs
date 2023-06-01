@@ -87,5 +87,43 @@ describe('Company Unit Test', () => {
     expect(typeCompany.name).toBe('new name');
   });
 
+  it('should update a category', () => {
+    const company = new Company({
+      name: 'some name',
+      government_code: 'some government_code',
+      address: 'some address',
+      address_number: ' some address_number',
+      neighborhood: 'some neighborhood',
+      city: 'some city',
+      state: 'some state',
+      zip_code: 'some zip_code',
+      vacancies_cars: 0,
+      vacancies_motorcycle: 0,
+    });
+    company.update({
+      name: 'some updated',
+      government_code: 'some government_updated',
+      address: 'some address_updated',
+      address_number: 'some address_number_updated',
+      neighborhood: 'some neighborhood_updated',
+      city: 'some city_updated',
+      state: 'to',
+      zip_code: 'some zip_code_updated',
+      vacancies_cars: 1,
+      vacancies_motorcycle: 5,
+    });
+    expect(Company.validate).toHaveBeenCalledTimes(2);
+    expect(company.name).toBe('some updated');
+    expect(company.government_code).toBe('some government_updated');
+    expect(company.address).toBe('some address_updated');
+    expect(company.address_number).toBe('some address_number_updated');
+    expect(company.neighborhood).toBe('some neighborhood_updated');
+    expect(company.city).toBe('some city_updated');
+    expect(company.state).toBe('to');
+    expect(company.zip_code).toBe('some zip_code_updated');
+    expect(company.vacancies_cars).toBe(1);
+    expect(company.vacancies_motorcycle).toBe(5);
+  });
+
   //Aqui eu poderia testa os restanteres de getters and setters
 });

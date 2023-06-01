@@ -38,6 +38,21 @@ export class Company extends Entity<CompanyProperties> {
     this.props.updated_at = this.props.updated_at ?? new Date();
   }
 
+  update(props: CompanyProperties): void {
+    Company.validate(props);
+    this.name = props.name;
+    this.government_code = props.government_code;
+    this.address = props.address;
+    this.address_number = props.address_number;
+    this.neighborhood = props.neighborhood;
+    this.city = props.city;
+    this.state = props.state;
+    this.zip_code = props.zip_code;
+    this.vacancies_cars = props.vacancies_cars;
+    this.vacancies_motorcycle = props.vacancies_motorcycle;
+    this.props.updated_at = new Date();
+  }
+
   get name() {
     return this.props.name;
   }
