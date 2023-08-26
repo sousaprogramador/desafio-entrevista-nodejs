@@ -54,13 +54,13 @@ export class UserController {
     @Param('id', new ParseUUIDPipe({ errorHttpStatusCode: 422 })) id: string,
   ) {
     const output = await this.getUseCase.execute({ id });
-    return UserController.UserToResponse(output);
+    return UserController.userToResponse(output);
   }
 
   @Post()
   async create(@Body() createUserDto: CreateUserDto) {
     const output = await this.createUseCase.execute(createUserDto);
-    return UserController.UserToResponse(output);
+    return UserController.userToResponse(output);
   }
 
   @Put(':id') //PUT vs PATCH
@@ -72,7 +72,7 @@ export class UserController {
       id,
       ...updateUserDto,
     });
-    return UserController.UserToResponse(output);
+    return UserController.userToResponse(output);
   }
 
   @HttpCode(204)
@@ -83,7 +83,7 @@ export class UserController {
     return this.deleteUseCase.execute({ id });
   }
 
-  static UserToResponse(output: UserOutput) {
+  static userToResponse(output: UserOutput) {
     return new UserPresenter(output);
   }
 }
