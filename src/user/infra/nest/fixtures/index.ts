@@ -49,10 +49,9 @@ export class UserFixture {
         send_data: {},
         expected: {
           message: [
-            'name should not be empty',
             'name must be a string',
-            'email should not be empty',
             'email must be a string',
+            'password must be a string',
           ],
           ...defaultExpected,
         },
@@ -63,10 +62,9 @@ export class UserFixture {
         },
         expected: {
           message: [
-            'name should not be empty',
             'name must be a string',
-            'email should not be empty',
             'email must be a string',
+            'password must be a string',
           ],
           ...defaultExpected,
         },
@@ -77,10 +75,9 @@ export class UserFixture {
         },
         expected: {
           message: [
-            'name should not be empty',
             'name must be a string',
-            'email should not be empty',
             'email must be a string',
+            'password must be a string',
           ],
           ...defaultExpected,
         },
@@ -91,9 +88,9 @@ export class UserFixture {
         },
         expected: {
           message: [
-            'name should not be empty',
-            'email should not be empty',
+            'name must be a string',
             'email must be a string',
+            'password must be a string',
           ],
           ...defaultExpected,
         },
@@ -113,15 +110,8 @@ export class UserFixture {
         send_data: {},
         expected: {
           message: [
-            'name should not be empty',
-            'name must be shorter than or equal to 255 characters',
             'name must be a string',
-            'email must be an email',
-            'email should not be empty',
-            'email must be shorter than or equal to 255 characters',
             'email must be a string',
-            'password should not be empty',
-            'password must be shorter than or equal to 255 characters',
             'password must be a string',
           ],
           ...defaultExpected,
@@ -133,15 +123,8 @@ export class UserFixture {
         },
         expected: {
           message: [
-            'name should not be empty',
-            'name must be shorter than or equal to 255 characters',
             'name must be a string',
-            'email must be an email',
-            'email should not be empty',
-            'email must be shorter than or equal to 255 characters',
             'email must be a string',
-            'password should not be empty',
-            'password must be shorter than or equal to 255 characters',
             'password must be a string',
           ],
           ...defaultExpected,
