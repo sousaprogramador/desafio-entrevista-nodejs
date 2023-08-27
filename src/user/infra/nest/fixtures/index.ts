@@ -113,8 +113,11 @@ export class UserFixture {
         send_data: {},
         expected: {
           message: [
+            'name should not be empty',
             'name must be a string',
+            'email should not be empty',
             'email must be a string',
+            'password should not be empty',
             'password must be a string',
           ],
           ...defaultExpected,
@@ -126,8 +129,11 @@ export class UserFixture {
         },
         expected: {
           message: [
+            'name should not be empty',
             'name must be a string',
+            'email should not be empty',
             'email must be a string',
+            'password should not be empty',
             'password must be a string',
           ],
           ...defaultExpected,
