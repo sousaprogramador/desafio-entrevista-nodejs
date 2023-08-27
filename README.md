@@ -15,10 +15,53 @@ Criar uma API REST para gerenciar um estacionamento de carros e motos.
 
 #### Stack tecnológica
 
-- NestJS
+- NestJS [*]
+- TypeOrm [*]
+- Mysql [*]
+- Swagger [(ainda falta implementar)]
+- JWT [(ainda falta implementar)]
+
+-[*] Cadastro de Usuarios
+-[] Autenticacao
+-[] Empresas
+-[] Veiculos
+-[] Dashbard
+
+> ## Bibliotecas e Ferramentas
+
+- NPM
+- Typescript
+- Git
+- Docker
+- Jest
 - TypeOrm
-- Mysql
-- Swagger
+- MySQL
+- Sequelite
+- SuperTest
+
+> ## Features do Typescript
+
+- POO Avançado
+- Interface
+- TypeAlias
+- Namespace
+- Utility Types
+- Modularização de Paths
+- Configurações
+- Build
+- Deploy
+- Uso de Breakpoints
+
+> ## Features de Testes
+
+- Testes Unitários
+- Testes de Integração
+- Cobertura de Testes
+- Test Doubles
+- Mocks
+- Stubs
+- Spies
+- Fakes
 
 #### Cadastro de estabelecimento
 
@@ -73,11 +116,3 @@ Efetuar deploy da nossa API no ambiente do Google Cloud Platform utilizando os s
 
 - Container Registry (Subir a imagem docker)
 - Cloud Run
-
-## Submissão
-
-Crie um fork do teste para acompanharmos o seu desenvolvimento através dos seus commits.
-
-## Obrigado!
-
-Agradecemos sua participação no teste. Boa sorte! 😄
