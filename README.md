@@ -21,11 +21,11 @@ Criar uma API REST para gerenciar um estacionamento de carros e motos.
 - Swagger [(ainda falta implementar)]
 - JWT [(ainda falta implementar)]
 
--[*] Cadastro de Usuarios
--[] Autenticacao
--[] Empresas
--[] Veiculos
--[] Dashbard
+- [*] Cadastro de Usuarios
+- [] Autenticacao
+- [] Empresas
+- [] Veiculos
+- [] Dashbard
 
 > ## Bibliotecas e Ferramentas
 
