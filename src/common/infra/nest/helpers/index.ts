@@ -26,5 +26,9 @@ export function startApp({
     }
   });
 
-  return _app;
+  return {
+    get app() {
+      return _app;
+    },
+  };
 }
