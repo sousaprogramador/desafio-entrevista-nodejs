@@ -43,6 +43,7 @@ Criar uma API REST para gerenciar um estacionamento de carros e motos.
 - MySQL
 - Sequelite
 - SuperTest
+- Swagger
 
 > ## Features do Typescript
 
