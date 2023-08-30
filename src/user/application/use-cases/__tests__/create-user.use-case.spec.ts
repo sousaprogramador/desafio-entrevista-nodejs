@@ -1,15 +1,17 @@
 import CreateUserUseCase from '../create-user.use-case';
-import { UserInMemoryRepository } from '../../../infra/db';
+import { UserInMemoryRepository, Cryptography } from '../../../infra';
 import { User } from '../../../domain';
 import { EntityValidationError } from '../../../../common';
 
 describe('CreateUserUseCase Unit Tests', () => {
   let useCase: CreateUserUseCase.UseCase;
   let repository: UserInMemoryRepository;
+  let crypto: Cryptography;
 
   beforeEach(() => {
     repository = new UserInMemoryRepository();
-    useCase = new CreateUserUseCase.UseCase(repository);
+    crypto = new Cryptography();
+    useCase = new CreateUserUseCase.UseCase(repository, crypto);
     jest.restoreAllMocks();
   });
 

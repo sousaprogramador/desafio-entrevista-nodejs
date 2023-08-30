@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-namespace */
 import { DataSource } from 'typeorm';
 import { UserEntity } from '../db';
 import { UserRepository } from '../../domain';
 import { UserTypeOrmRepository } from '../db';
+import { Cryptography } from '../bcrypt';
 import {
   CreateUserUseCase,
   UpdateUserUseCase,
@@ -31,7 +31,7 @@ export namespace USER_PROVIDERS {
     export const CREATE_USER_USE_CASE = {
       provide: CreateUserUseCase.UseCase,
       useFactory: (userRepo: UserRepository.Repository) => {
-        return new CreateUserUseCase.UseCase(userRepo);
+        return new CreateUserUseCase.UseCase(userRepo, new Cryptography());
       },
       inject: [REPOSITORIES.USER_REPOSITORY.provide],
     };
