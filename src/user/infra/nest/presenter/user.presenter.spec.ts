@@ -75,7 +75,6 @@ describe('UserCollectionPresenter Unit Tests', () => {
         name: 'some test',
         email: 'sometest@mail.com',
         avatar: '',
-        driver_licenses: '123AE',
         is_active: true,
         created_at,
       };
@@ -103,7 +102,6 @@ describe('UserCollectionPresenter Unit Tests', () => {
         name: 'some test',
         email: 'sometest@mail.com',
         avatar: '',
-        driver_licenses: '123AE',
         is_active: true,
         created_at,
       };
@@ -161,7 +159,7 @@ describe('UserCollectionPresenter Unit Tests', () => {
           name: 'some test',
           email: 'sometest@mail.com',
           avatar: '',
-          driver_licenses: '123AE',
+
           is_active: true,
           created_at: created_at.toISOString().slice(0, 19) + '.000Z',
         },
@@ -198,7 +196,7 @@ describe('UserCollectionPresenter Unit Tests', () => {
           name: 'some test',
           email: 'sometest@mail.com',
           avatar: '',
-          driver_licenses: '123AE',
+
           is_active: false,
           created_at: created_at.toISOString().slice(0, 19) + '.000Z',
         },
