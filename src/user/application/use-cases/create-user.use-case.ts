@@ -1,14 +1,16 @@
-import { hash } from 'bcrypt';
-import { User, UserRepository } from '../../domain';
+import { CryptographyInterface, User, UserRepository } from '../../domain';
 import { UserOutput, UserOutputMapper } from '../dto';
 import { UseCase as DefaultUseCase } from '../../../common';
 
 export namespace CreateUserUseCase {
   export class UseCase implements DefaultUseCase<Input, Output> {
-    constructor(private userRepo: UserRepository.Repository) {}
+    constructor(
+      private userRepo: UserRepository.Repository,
+      private crypt: CryptographyInterface,
+    ) {}
 
     async execute(input: Input): Promise<Output> {
-      const password = await hash(input.password, 8);
+      const password = await this.crypt.hash(input.password);
 
       const entity = new User({
         ...input,

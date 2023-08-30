@@ -2,10 +2,8 @@ import {
   Column,
   Entity,
   Unique,
-  DeleteDateColumn,
   PrimaryGeneratedColumn,
   CreateDateColumn,
-  UpdateDateColumn,
 } from 'typeorm';
 import { Exclude } from 'class-transformer';
 
